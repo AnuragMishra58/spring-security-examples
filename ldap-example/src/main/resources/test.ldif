@@ -1,0 +1,84 @@
+dn: dc=anurag,dc=org
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: anurag
+
+dn: ou=groups,dc=anurag,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=subgroups,ou=groups,dc=anurag,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: subgroups
+
+dn: ou=people,dc=anurag,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=ben,ou=people,dc=anurag,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Ben Alex
+sn: Alex
+uid: ben
+userPassword: $2a$10$c6bSeWPhg06xB1lvmaWNNe4NROmZiSpYhlocU/98HNr2MhIOiSt36
+
+dn: uid=bob,ou=people,dc=anurag,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Bob Hamilton
+sn: Hamilton
+uid: bob
+userPassword: $2a$10$6QTzY.0xkQppDRNpSPWMnegFdUOAGAT8Tv.XCgI4ABKtvsr.Ix8Qu
+
+dn: cn=mouse\, jerry,ou=people,dc=anurag,dc=org
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Mouse, Jerry
+sn: Mouse
+uid: jerry
+userPassword: $2a$10$6QTzY.0xkQppDRNpSPWMnegFdUOAGAT8Tv.XCgI4ABKtvsr.Ix8Qu
+
+dn: cn=slash/guy,ou=people,dc=anurag,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: slash/guy
+sn: Slash
+uid: slashguy
+userPassword: $2a$10$6QTzY.0xkQppDRNpSPWMnegFdUOAGAT8Tv.XCgI4ABKtvsr.Ix8Qu
+
+
+dn: cn=developers,ou=groups,dc=anurag,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: developers
+ou: developer
+uniqueMember: uid=ben,ou=people,dc=anurag,dc=org
+uniqueMember: uid=bob,ou=people,dc=anurag,dc=org
+
+dn: cn=managers,ou=groups,dc=anurag,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: managers
+ou: manager
+uniqueMember: uid=ben,ou=people,dc=anurag,dc=org
+uniqueMember: cn=mouse\, jerry,ou=people,dc=anurag,dc=org
+
+dn: cn=submanagers,ou=subgroups,ou=groups,dc=anurag,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: submanagers
+ou: submanager
+uniqueMember: uid=ben,ou=people,dc=anurag,dc=org
+uniqueMember: uid=bob,ou=people,dc=anurag,dc=org
