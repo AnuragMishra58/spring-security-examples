@@ -1,6 +1,6 @@
 ## About The Project
 
-This project is a sample application doing various things with "social login" using OAuth 2.0 and Spring Boot.
+This project is a sample application which logs in usign github auth server using OAuth 2.0 and Spring Boot.
 
 It is a single-page application using Spring Boot and Spring Security on the back-end. It uses plain jQuery on the frontend.
 
@@ -95,7 +95,7 @@ Enter an app name and description.
 Then, enter your app's home page, which should be http://localhost:8080, in this case.
 Finally, indicate the Authorization callback URL as `http://localhost:8080/login/oauth2/code/github` and click _Register Application_.
 
-### Add following properties in `application.yml`
+### Add following properties in application.yml
 ````
 spring.security.oauth2.client.registration.github.client-id=git-client-id
 spring.security.oauth2.client.registration.github.client-secret=git-client-secret
@@ -104,7 +104,7 @@ spring.security.oauth2.client.registration.google.client-secret=google-client-se
 ````
 Add OAuth 2.0 credentials we just created with GitHub, replacing `git-client-id` with the client id and `git-client-secret` with the client secret.
 
-### Add `/user` Endpoint
+### Add /user Endpoint
 
 Add the server-side endpoint just mentioned, calling it `/user`.
 It will send back the currently logged-in user-name
@@ -115,7 +115,7 @@ It will send back the currently logged-in user-name
     }
 ````
 
-### Add javascript to call `/user` from `index.html`
+### Add javascript to call /user from index.html
 ````
 <script type="text/javascript">
     $.get("/user", function(data) {
@@ -125,7 +125,7 @@ It will send back the currently logged-in user-name
     });
 </script>
 ````
-### Add javascript for  `logout` functionality
+### Add javascript for logout functionality
 Spring Security has built in support for a /logout endpoint which will automatically take care of logout. 
 However, The /logout endpoint requires a token to prevent CSRF. We will add few configuration in Spring for this later. 
 First let's call the logout from index.html
