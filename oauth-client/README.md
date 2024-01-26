@@ -214,7 +214,7 @@ Click on `Login using Git` to take you to GitHub (if you are already logged in t
 Click on the `Logout` button to logout of the app
 You can open developer tools and inspect cookies to see JSESSIONID and XSRF-TOKEN
 
-![/img/cookie.png](/img/cookie.png)
+![/img/cookie.png](/oauth-client/img/cookie.png)
 
 
 
