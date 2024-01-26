@@ -8,4 +8,5 @@ Each of the supported mechanisms for reading a username and password can use any
 <li>Relational Databases with JDBC Authentication</li>
 <li>Custom data stores with UserDetailsService</li>
 <li>LDAP storage with LDAP Authentication</li>
+<li>OAuth2 Authentication using github/google as Authorization Server</li>
 </ul>
