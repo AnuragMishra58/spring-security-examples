@@ -1,6 +1,6 @@
 ## About The Project
 
-This project is a sample application which logs in usign github auth server using OAuth 2.0 and Spring Boot.
+This project is a sample application which logs in with github as auth server using OAuth 2.0 and Spring Boot.
 
 It is a single-page application using Spring Boot and Spring Security on the back-end. It uses plain jQuery on the frontend.
 
